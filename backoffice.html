@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Back Office</title>
+  <link rel="stylesheet" href="./assets/css/backoffice.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1>Back Office</h1>
+      <ul class="menu">
+        <li><a href="#" class="active">Utilisateurs</a></li>
+        <li><a href="#">Produits</a></li>
+        <li><a href="#">Commandes</a></li>
+        <li><a href="#">Catégories</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <div class="main-header">
+        <h2>Liste des utilisateurs</h2>
+        <button class="btn-add">+ Ajouter un utilisateur</button>
+      </div>
+
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Email</th>
+              <th>Rôle</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="ID">1</td>
+              <td data-label="Nom">Jean Dupont</td>
+              <td data-label="Email">jean.dupont@mail.com</td>
+              <td data-label="Rôle">Admin</td>
+              <td data-label="Actions">
+                <div class="actions">
+                  <button class="btn btn-view">Consulter</button>
+                  <button class="btn btn-edit">Modifier</button>
+                  <button class="btn btn-delete">Supprimer</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="ID">2</td>
+              <td data-label="Nom">Sophie Martin</td>
+              <td data-label="Email">sophie.martin@mail.com</td>
+              <td data-label="Rôle">Éditeur</td>
+              <td data-label="Actions">
+                <div class="actions">
+                  <button class="btn btn-view">Consulter</button>
+                  <button class="btn btn-edit">Modifier</button>
+                  <button class="btn btn-delete">Supprimer</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="ID">3</td>
+              <td data-label="Nom">Lucas Bernard</td>
+              <td data-label="Email">lucas.bernard@mail.com</td>
+              <td data-label="Rôle">Utilisateur</td>
+              <td data-label="Actions">
+                <div class="actions">
+                  <button class="btn btn-view">Consulter</button>
+                  <button class="btn btn-edit">Modifier</button>
+                  <button class="btn btn-delete">Supprimer</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="ID">4</td>
+              <td data-label="Nom">Emma Leroy</td>
+              <td data-label="Email">emma.leroy@mail.com</td>
+              <td data-label="Rôle">Utilisateur</td>
+              <td data-label="Actions">
+                <div class="actions">
+                  <button class="btn btn-view">Consulter</button>
+                  <button class="btn btn-edit">Modifier</button>
+                  <button class="btn btn-delete">Supprimer</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
