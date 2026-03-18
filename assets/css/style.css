@@ -92,11 +92,16 @@ button:hover, .btn:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-img {
+.img {
   max-width: 100%;
-  display: block;
+  display: flex;
+  text-align: center;
   border-radius: 8px;
   margin-bottom: 1rem;
+}
+
+.contact{
+  background-color: #C6A963;
 }
 
 footer {
