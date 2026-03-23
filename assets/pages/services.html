@@ -11,8 +11,10 @@
 
 <body>
 
-  <nav>
-    <ul>
+  <nav class="navbar-expand">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <ul id="nav-links">
       <li><a href="/index.html">Accueil</a></li>
       <li><a href="/assets/pages/services.html">Nos services</a></li>
       <li><a href="/assets/pages/contact.html">Prendre rendez-vous</a></li>
@@ -26,17 +28,26 @@
   <main>
 
     <div>
-    <a href="/assets/pages/femme.html">
-      <section class="section1">
-      </section>
-    </a>
-    <a href="/assets/pages/homme.html">
-      <section class="section2">
+      <a href="/assets/pages/femme.html">
+        <section class="section1">
         </section>
-    </a>
+      </a>
+      <a href="/assets/pages/homme.html">
+        <section class="section2">
+        </section>
+      </a>
     </div>
 
   </main>
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
 
   <footer>
     <p>Politique de confidentialité - Conditions générales d’utilisation</p>

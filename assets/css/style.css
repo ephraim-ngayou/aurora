@@ -10,7 +10,6 @@ body {
   line-height: 1.6;
 }
 
-
 a {
   color: #C6A963;
   text-decoration: none;
@@ -21,17 +20,36 @@ a:hover {
   color: #C6A963;
 }
 
+/* ---------------- NAVIGATION ---------------- */
 
 nav {
   background-color: #C6A963;
+  position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bouton d'ouverture mobile */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  color: #020202;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 2000;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   padding: 0.7rem 0;
+  transition: left 0.3s ease;
 }
 
 nav li {
@@ -52,6 +70,8 @@ nav a:hover {
   background-color: #C6A963;
   color: #020202;
 }
+
+/* ---------------- SECTIONS ---------------- */
 
 section {
   padding: 3rem 2rem;
@@ -75,6 +95,8 @@ section h3 {
   margin-bottom: 1.5rem;
 }
 
+/* ---------------- BOUTONS ---------------- */
+
 button,
 .btn {
   background-color: #C6A963;
@@ -94,6 +116,8 @@ button:hover,
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* ---------------- IMAGES ---------------- */
+
 .img {
   max-width: 100%;
   display: flex;
@@ -101,6 +125,8 @@ button:hover,
   border-radius: 8px;
   margin-bottom: 1rem;
 }
+
+/* ---------------- FOOTER ---------------- */
 
 .contact {
   background-color: #C6A963;
@@ -117,26 +143,47 @@ footer {
   box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* ---------------- RESPONSIVE ---------------- */
+
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  section {
-    padding: 2rem 1rem;
-    margin: 1rem;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  nav a {
+  /* Affiche le bouton */
+  nav.navbar-expand .menu-toggle {
     display: block;
-    margin: 5px 0;
+  }
+
+  /* NAV devient panneau latéral */
+  nav.navbar-expand ul {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background-color: #C6A963;
+    padding-top: 80px;
+    padding-left: 20px;
+    box-shadow: 3px 0 10px rgba(0,0,0,0.2);
+    z-index: 1500;
+  }
+
+  nav.navbar-expand ul.active {
+    left: 0;
+  }
+
+  nav.navbar-expand li {
+    margin: 20px 0;
+  }
+
+  nav.navbar-expand a {
+    display: block;
+    padding: 10px 0;
+    font-size: 1.2rem;
   }
 }
+
+/* ---------------- SERVICES ---------------- */
 
 .option {
   text-align: center;
@@ -154,6 +201,8 @@ footer {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.15s ease;
 }
+
+/* ---------------- FORMULAIRES ---------------- */
 
 .connexion {
   height: 100vh;
@@ -187,15 +236,6 @@ footer {
   gap: 8px;
 }
 
-button {
-  padding: 12px;
-  background: #C6A963;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
 .inscription {
   height: 100vh;
   display: flex;
@@ -224,21 +264,6 @@ button {
   border-radius: 8px;
 }
 
-.remember {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-button {
-  padding: 12px;
-  background: #C6A963;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
 .message {
   height: 1%;
   display: grid;
@@ -247,6 +272,8 @@ button {
   align-items: center;
   font-family: sans-serif;
 }
+
+/* ---------------- CONTACT ---------------- */
 
 #contact {
   width: 100%;
@@ -280,6 +307,8 @@ button {
 #contact button:hover {
   background: #C6A963;
 }
+
+/* ---------------- SECTIONS IMAGES ---------------- */
 
 section {
   width: 300px;
