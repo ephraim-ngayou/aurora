@@ -1,209 +1,302 @@
 * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    :root {
-      --gold: #C6A963;
-      --cream: #F9F9EA;
-      --black: #020202;
-      --border: #e4dfc8;
-      --danger: #b94a48;
-      --white: #ffffff;
-    }
+:root {
+  --gold: #C6A963;
+  --cream: #F9F9EA;
+  --black: #020202;
+  --border: #e4dfc8;
+  --danger: #b94a48;
+  --white: #ffffff;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: var(--cream);
-      color: var(--black);
-    }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cream);
+  color: var(--black);
+}
 
-    .layout {
-      display: flex;
-      min-height: 100vh;
-    }
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
 
-    /* sidebar */
-    .sidebar {
-      width: 250px;
-      background-color: var(--black);
-      color: var(--cream);
-      padding: 30px 20px;
-    }
+/* sidebar */
+.sidebar {
+  width: 250px;
+  background-color: var(--black);
+  color: var(--cream);
+  padding: 30px 20px;
+}
 
-    .sidebar h1 {
-      font-size: 22px;
-      margin-bottom: 30px;
-      color: var(--gold);
-    }
+.sidebar h1 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: var(--gold);
+}
 
-    .menu {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
-    .menu li a {
-      display: block;
-      text-decoration: none;
-      color: var(--cream);
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 14px 16px;
-      border-radius: 8px;
-      transition: 0.2s ease;
-      font-weight: 500;
-    }
+.menu li a {
+  display: block;
+  text-decoration: none;
+  color: var(--cream);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 14px 16px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+  font-weight: 500;
+}
 
-    .menu li a:hover,
-    .menu li a.active {
-      background-color: var(--gold);
-      color: var(--black);
-    }
+.menu li a:hover,
+.menu li a.active {
+  background-color: var(--gold);
+  color: var(--black);
+}
 
-    /* main */
-    .main {
-      flex: 1;
-      padding: 35px;
-    }
+/* main */
+.main {
+  flex: 1;
+  padding: 35px;
+}
 
-    .main-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 25px;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
-    .main-header h2 {
-      font-size: 28px;
-      color: var(--black);
-    }
+.main-header h2 {
+  font-size: 28px;
+  color: var(--black);
+}
 
-    .btn-add {
-      background-color: var(--gold);
-      color: var(--black);
-      border: none;
-      padding: 12px 18px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.2s ease;
-    }
+.btn-add {
+  background-color: var(--gold);
+  color: var(--black);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
 
-    .btn-add:hover {
-      opacity: 0.9;
-    }
+/* table container */
+.table-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
 
-    /* table container */
-    .table-card {
-      background-color: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+thead {
+  background-color: var(--gold);
+  color: var(--black);
+}
 
-    thead {
-      background-color: var(--gold);
-      color: var(--black);
-    }
+th,
+td {
+  text-align: left;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+}
 
-    th,
-    td {
-      text-align: left;
-      padding: 16px 18px;
-      border-bottom: 1px solid var(--border);
-    }
+tbody tr:hover {
+  background-color: #fcf8eb;
+}
 
-    tbody tr:hover {
-      background-color: #fcf8eb;
-    }
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
-    .actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+.btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
 
-    .btn {
-      border: none;
-      padding: 8px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: 600;
-      transition: 0.2s ease;
-    }
+.btn-view {
+  background-color: var(--black);
+  color: var(--cream);
+}
 
-    .btn-view {
-      background-color: var(--black);
-      color: var(--cream);
-    }
+.btn-edit {
+  background-color: var(--gold);
+  color: var(--black);
+}
 
-    .btn-edit {
-      background-color: var(--gold);
-      color: var(--black);
-    }
+.btn-delete {
+  background-color: var(--danger);
+  color: white;
+}
 
-    .btn-delete {
-      background-color: var(--danger);
-      color: white;
-    }
+/* boutons + liens */
+.btn,
+.btn-add {
+  text-decoration: none;
+  display: inline-block;
+}
 
-    .btn:hover {
-      opacity: 0.9;
-    }
+.btn:hover,
+.btn-add:hover {
+  opacity: 0.9;
+}
 
-    @media (max-width: 900px) {
-      .layout {
-        flex-direction: column;
-      }
+/* zone contenu + panneau */
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
 
-      .sidebar {
-        width: 100%;
-      }
+.panel {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
 
-      .main {
-        padding: 20px;
-      }
+.panel h3 {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
 
-      table,
-      thead,
-      tbody,
-      th,
-      td,
-      tr {
-        display: block;
-        width: 100%;
-      }
+.panel p {
+  line-height: 1.6;
+}
 
-      thead {
-        display: none;
-      }
+.detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
-      tbody tr {
-        padding: 15px;
-        border-bottom: 1px solid var(--border);
-      }
+.detail-item {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: #fcf8eb;
+}
 
-      td {
-        border: none;
-        padding: 8px 0;
-      }
+.detail-item strong {
+  display: block;
+  margin-bottom: 4px;
+}
 
-      td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        display: block;
-        margin-bottom: 4px;
-        color: var(--gold);
-      }
-    }
+.fake-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fake-form input,
+.fake-form textarea,
+.fake-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: var(--white);
+  color: var(--black);
+  outline: none;
+}
+
+.fake-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.fake-form input:focus,
+.fake-form textarea:focus,
+.fake-form select:focus {
+  border-color: var(--gold);
+}
+
+.info-box {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #fcf8eb;
+  border: 1px solid var(--border);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .main {
+    padding: 20px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  td {
+    border: none;
+    padding: 8px 0;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    color: var(--gold);
+  }
+}
