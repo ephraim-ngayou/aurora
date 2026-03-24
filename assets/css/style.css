@@ -255,8 +255,8 @@ footer {
   font-family: sans-serif;
 }
 
-.sigin-form input[type="name"],
-.sigin-form input[type="firstname"],
+.sigin-form input[type="text"],
+.sigin-form input[type="text"],
 .sigin-form input[type="email"],
 .sigin-form input[type="tel"],
 .sigin-form input[type="password"] {

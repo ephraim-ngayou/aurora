@@ -82,19 +82,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <form method="post" class="sigin-form">
 
         <label>Nom</label>
-        <input type="text" name="name" value="<?= htmlspecialchars($name ?? '') ?>" required minlength="2" maxlength="30">
+        <input type="text" name="name" placeholder="Votre nom" value="<?= htmlspecialchars($name ?? '') ?>" required minlength="2" maxlength="30">
 
         <label>Prénom</label>
-        <input type="text" name="firstname" value="<?= htmlspecialchars($firstname ?? '') ?>" required minlength="2" maxlength="30">
+        <input type="text" name="firstname" placeholder="Votre prénom" value="<?= htmlspecialchars($firstname ?? '') ?>" required minlength="2" maxlength="30">
 
         <label>Email</label>
-        <input type="email" name="email" value="<?= htmlspecialchars($email ?? '') ?>" required>
+        <input type="email" name="email" placeholder="Votre email" value="<?= htmlspecialchars($email ?? '') ?>" required>
 
         <label>Téléphone</label>
-        <input type="tel" name="phone" value="<?= htmlspecialchars($phone ?? '') ?>" required pattern="[0-9]{10}">
+        <input type="tel" name="phone" placeholder="Votre numéro de téléphone" value="<?= htmlspecialchars($phone ?? '') ?>" required pattern="[0-9]{10}">
 
         <label>Mot de passe</label>
-        <input type="password" name="password" required minlength="6">
+        <input type="password" name="password" placeholder="Votre mot de passe" required minlength="6">
 
         <button type="submit">S'inscrire</button>
     </form>
