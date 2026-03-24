@@ -3,18 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurora - Accueil</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-
+    <title>Rendez-vous enregistré</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
-
     <header>
     </header>
-    <main>
-
         <nav class="navbar-expand">
             <div class="overlay" id="overlay"></div>
             <div class="menu-toggle" id="menu-toggle">☰</div>
@@ -27,29 +22,15 @@
                 <li><a href="/pages/contact.html">Nous Contacter</a></li>
 
 
-
             </ul>
         </nav>
+        <section>
 
-        <div class="option" class="menu-toggle" id="menu-toggle">
-            <li><a href="/pages/horaire.html?service=Balayage brush mi court" class="service">
-                    <h3>Balayage brush mi court</h3>
-                    <p>105min, 75 euros</p>
-                </a></li>
-            <li><a href="/pages/horaire.html?service=Balayage brush court" class="service">
-                    <h3>Balayage brush court</h3>
-                    <p>15 min, 25 euros</p>
-                </a></li>
-            <li><a href="/pages/horaire.html?service=Balayage brush mi long" class="service">
-                    <h3>Balayage brush mi long</h3>
-                    <p>120min, 80 euros</p>
-                </a></li>
-            <li><a href="/pages/horaire.html?service=Balayage brush long" class="service">
-                    <h3>Balayage brush long</h3>
-                    <p>120min, 80 euros</p>
-                </a></li>
-        </div>
+            <h1>Rendez-vous enregistré !</h1>
+            <p id="details"></p>
+        </section>
     </main>
+
     <footer>
         <p>Politique de confidentialité - Conditions générales d’utilisation</p>
         <p>&copy;2026 Aurora Hair Salon. Tous droits réservés.</p>
@@ -70,6 +51,18 @@
         });
     </script>
 
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const service = params.get("service");
+        const day = params.get("day");
+        const hour = params.get("hour");
+
+        document.getElementById("details").textContent =
+            "Service : " + service +
+            " — Jour : " + day +
+            " — Heure : " + hour;
+    </script>
 
 </body>
 

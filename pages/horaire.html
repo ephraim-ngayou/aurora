@@ -32,23 +32,37 @@
         </nav>
 
 
-        <section class="horaire-section">
+      <section class="horaire-section">
 
-            <h1>Choisissez un créneau</h1>
+  <h1>Choisissez votre créneau</h1>
 
-            <div class="creneaux-list">
+  <!-- Choix du jour -->
+  <label for="day-select">Jour :</label>
+  <select id="day-select" class="select-input">
+    <option value="">-- Sélectionnez un jour --</option>
+    <option value="Lundi">Lundi</option>
+    <option value="Mardi">Mardi</option>
+    <option value="Mercredi">Mercredi</option>
+    <option value="Jeudi">Jeudi</option>
+    <option value="Vendredi">Vendredi</option>
+    <option value="Samedi">Samedi</option>
+  </select>
 
-                <button class="creneau-btn">09h00</button>
-                <button class="creneau-btn">09h30</button>
-                <button class="creneau-btn">10h30</button>
-                <button class="creneau-btn">11h30</button>
-                <button class="creneau-btn">12h30</button>
-                <button class="creneau-btn">14h00</button>
-                <button class="creneau-btn">15h30</button>
+  <!-- Choix de l'heure -->
+  <label for="hour-select">Heure :</label>
+  <select id="hour-select" class="select-input">
+    <option value="">-- Sélectionnez une heure --</option>
+    <option value="09h00">09h00</option>
+    <option value="10h00">10h00</option>
+    <option value="11h00">11h00</option>
+    <option value="14h00">14h00</option>
+    <option value="15h00">15h00</option>
+  </select>
 
-            </div>
+  <button id="confirm-btn" class="confirm-btn">Confirmer</button>
 
-        </section>
+</section>
+
 
     </main>
 
@@ -71,6 +85,31 @@
             navLinks.classList.remove("active");
             overlay.classList.remove("active");
         });
+
+         const daySelect = document.getElementById("day-select");
+  const hourSelect = document.getElementById("hour-select");
+  const confirmBtn = document.getElementById("confirm-btn");
+
+  
+
+
+  const params = new URLSearchParams(window.location.search);
+  const service = params.get("service");
+
+  confirmBtn.addEventListener("click", () => {
+    const day = daySelect.value;
+    const hour = hourSelect.value;
+
+    if (!day || !hour) {
+      alert("Veuillez choisir un jour et une heure.");
+      return;
+    }
+
+    window.location.href =
+      "/pages/confirmation.html?service=" + encodeURIComponent(service) +
+      "&day=" + encodeURIComponent(day) +
+      "&hour=" + encodeURIComponent(hour);
+  });
     </script>
 </body>
 
