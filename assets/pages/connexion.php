@@ -57,14 +57,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 if (password_verify($password, $user["password"])) {
 
                   if ($user["role"] == 1){
-                    header("Location: ");
-                  }
+                    header("Location: /admin/index.php");
+                  } else {
                     session_regenerate_id(true);
 
                     $_SESSION["id"] = $user["Id_users"];
 
                     header("Location: /index.php");
                     exit();
+                  }
+                    
                 } else {
                     $errors["password"] = "Email ou mot de passe incorrect";
                 }
