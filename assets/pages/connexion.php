@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $email = trim($_POST["email"] ?? "");
     $password = trim($_POST["password"] ?? "");
+    $_SESSION["role"] = $pdo->lastInsertId();
 
     // 🔹 validation email
     if (empty($email)) {
@@ -41,14 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $errors["password"] = "Mot de passe requis";
     }
 
-    // 🔹 debug brut (à enlever après)
-    echo "<pre>";
-    echo "EMAIL POST : ";
-    var_dump($email);
-    echo "PASSWORD POST : ";
-    var_dump($password);
-    echo "</pre>";
-
     if (!array_filter($errors)) {
 
         try {
@@ -59,28 +52,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             $user = $stmt->fetch();
 
-            // 🔹 debug user récupéré
-            echo "<pre>";
-            echo "USER EN BDD : ";
-            var_dump($user);
-            echo "</pre>";
-
             if ($user) {
 
-                // 🔹 test du hash
-                echo "<pre>";
-                echo "RESULTAT password_verify : ";
-                var_dump(password_verify('nintendo', $user["password"]));
-                echo "</pre>";
+                if (password_verify($password, $user["password"])) {
 
-                // 🔹 test du format du hash
-                echo "<pre>";
-                echo "HASH EN BASE : ";
-                var_dump($user["password"]);
-                echo "</pre>";
-                var_dump(password_verify('nintendo', $user["password"]));
-                if (password_verify('nintendo', $user["password"])) {
-
+                  if ($user["role"] == 1){
+                    header("Location: ");
+                  }
                     session_regenerate_id(true);
 
                     $_SESSION["id"] = $user["Id_users"];
