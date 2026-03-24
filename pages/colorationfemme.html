@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora - Accueil</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+    </header>
+    <main>
+
+        <nav class="navbar-expand">
+            <div class="overlay" id="overlay"></div>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+
+            <ul id="nav-links">
+                <li><a href="/index.html">Accueil</a></li>
+                <li><a href="/pages/services.html">Nos services</a></li>
+                <li><a href="/pages/contact.html">Prendre rendez-vous</a></li>
+                <li><a href="/pages/connexion.html">Se connecter</a></li>
+                <li><a href="/pages/contact.html">Nous Contacter</a></li>
+
+
+
+            </ul>
+        </nav>
+
+        <div class="option" class="menu-toggle" id="menu-toggle">
+            <li><a href="/pages/connexion.html" class="service">
+                    <h3>Brush couleur court</h3>
+                    <p>75min, 50 euros</p>
+                </a></li>
+            <li><a href="/pages/connexion.html" class="service">
+                    <h3>Brush couleur long</h3>
+                    <p>90 min, 70 euros</p>
+                </a></li>
+            <li><a href="/pages/connexion.html" class="service">
+                    <h3>Couleur coupe court</h3>
+                    <p>105min, 75 euros</p>
+                </a></li>
+            <li><a href="/pages/connexion.html" class="service">
+                    <h3>Couleur coupe longue</h3>
+                    <p>105min, 75 euros</p>
+                </a></li>
+        </div>
+    </main>
+    <footer>
+        <p>Politique de confidentialité - Conditions générales d’utilisation</p>
+        <p>&copy;2026 Aurora Hair Salon. Tous droits réservés.</p>
+    </footer>
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+        const overlay = document.getElementById("overlay");
+
+        toggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            overlay.classList.toggle("active");
+        });
+
+        overlay.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            overlay.classList.remove("active");
+        });
+    </script>
+
+
+</body>
+
+</html>

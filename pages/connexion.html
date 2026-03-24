@@ -2,15 +2,14 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aurora - Accueil</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> T.T.G Network - Formulaire</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
 
 <body>
-
   <header>
   </header>
   <main>
@@ -20,45 +19,53 @@
       <div class="menu-toggle" id="menu-toggle">☰</div>
 
       <ul id="nav-links">
-        <li><a href="index.html">Accueil</a></li>
+        <li><a href="/index.html">Accueil</a></li>
         <li><a href="/pages/services.html">Nos services</a></li>
         <li><a href="/pages/contact.html">Prendre rendez-vous</a></li>
-        <li><a href="/pages/connexion.html">Se connecter</a></li>
+        <li><a href="pages/connexion.html">Se connecter</a></li>
         <li><a href="/pages/contact.html">Nous Contacter</a></li>
-
 
 
       </ul>
     </nav>
+    <div class="connexion">
+      <form action="#" method="post" class="login-form">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Votre email" required>
 
-    <div>
-      <section class="section1">
-      </section>
-      <section class="section2">
-      </section>
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" placeholder="Votre mot de passe" required>
+
+        <button type="submit">Connexion</button>
+
+
+
+        <p class="signup-text">
+          Vous n'avez pas de compte ?
+          <a href="/pages/inscription.html">Créez‑en un</a>
+        </p>
     </div>
   </main>
-
   <footer>
     <p>Politique de confidentialité - Conditions générales d’utilisation</p>
     <p>&copy;2026 Aurora Hair Salon. Tous droits réservés.</p>
   </footer>
-
   <script>
     const toggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
     const overlay = document.getElementById("overlay");
-  
+
     toggle.addEventListener("click", () => {
       navLinks.classList.toggle("active");
       overlay.classList.toggle("active");
     });
-  
+
     overlay.addEventListener("click", () => {
       navLinks.classList.remove("active");
       overlay.classList.remove("active");
     });
   </script>
+
 </body>
 
 </html>
