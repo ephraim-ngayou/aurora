@@ -18,11 +18,11 @@
         <div class="menu-toggle" id="menu-toggle">☰</div>
 
         <ul id="nav-links">
-            <li><a href="/index.html">Accueil</a></li>
-            <li><a href="/assets/pages/services.html">Nos services</a></li>
-            <li><a href="/assets/pages/contact.html">Prendre rendez-vous</a></li>
-            <li><a href="/assets/pages/connexion.html">Se connecter</a></li>
-            <li><a href="/assets/pages/contact.html">Nous Contacter</a></li>
+            <li><a href="/index.php">Accueil</a></li>
+            <li><a href="/assets/pages/services.php">Nos services</a></li>
+            <li><a href="/assets/pages/contact.php">Prendre rendez-vous</a></li>
+            <li><a href="/assets/pages/connexion.php">Se connecter</a></li>
+            <li><a href="/assets/pages/contact.php">Nous Contacter</a></li>
 
 
 
@@ -30,19 +30,19 @@
     </nav>
 
     <div class="option">
-        <li><a href="/assets/pages/connexion.html" class="service">
+        <li><a href="/assets/pages/connexion.php" class="service">
                 <h3>Coupe Homme</h3>
                 <p>30min, 30 euros</p>
             </a></li>
-        <li><a href="/assets/pages/connexion.html" class="service">
+        <li><a href="/assets/pages/connexion.php" class="service">
                 <h3>Coupe couronne Homme</h3>
                 <p>15 min, 25 euros</p>
             </a></li>
-        <li><a href="/assets/pages/connexion.html" class="service">
+        <li><a href="/assets/pages/connexion.php" class="service">
                 <h3>Sh Coupe Homme</h3>
                 <p>30min, 35 euros</p>
             </a></li>
-        <li><a href="/assets/pages/connexion.html" class="service">
+        <li><a href="/assets/pages/connexion.php" class="service">
                 <h3>Coupe garçon</h3>
                 <p>15min, 25 euros</p>
             </a></li>

@@ -18,11 +18,11 @@
         <div class="menu-toggle" id="menu-toggle">☰</div>
 
         <ul id="nav-links">
-            <li><a href="/index.html">Accueil</a></li>
-            <li><a href="/assets/pages/services.html">Nos services</a></li>
-            <li><a href="/assets/pages/contact.html">Prendre rendez-vous</a></li>
-            <li><a href="/assets/pages/connexion.html">Se connecter</a></li>
-            <li><a href="/assets/pages/contact.html">Nous Contacter</a></li>
+            <li><a href="/index.php">Accueil</a></li>
+            <li><a href="/assets/pages/services.php">Nos services</a></li>
+            <li><a href="/assets/pages/contact.php">Prendre rendez-vous</a></li>
+            <li><a href="/assets/pages/connexion.php">Se connecter</a></li>
+            <li><a href="/assets/pages/contact.php">Nous Contacter</a></li>
 
 
 
@@ -30,21 +30,21 @@
     </nav>
 
     <div class="option" class="menu-toggle" id="menu-toggle">
-        <li><a href="/assets/pages/connexion.html" class="service">
-                <h3>Attache</h3>
-                <p>45min, 40 euros</p>
+        <li><a href="/assets/pages/connexion.php" class="service">
+                <h3>Brush couleur court</h3>
+                <p>75min, 50 euros</p>
             </a></li>
-        <li><a href="/assets/pages/connexion.html" class="service">
-                <h3>Chignon</h3>
-                <p>45 min, 30 euros</p>
+        <li><a href="/assets/pages/connexion.php" class="service">
+                <h3>Brush couleur long</h3>
+                <p>90 min, 70 euros</p>
             </a></li>
-        <li><a href="/assets/pages/connexion.html" class="service">
-                <h3>Brush mi long</h3>
-                <p>30min, 35 euros</p>
+        <li><a href="/assets/pages/connexion.php" class="service">
+                <h3>Couleur coupe court</h3>
+                <p>105min, 75 euros</p>
             </a></li>
-        <li><a href="/assets/pages/connexion.html" class="service">
-                <h3>Brush long</h3>
-                <p>30min, 35 euros</p>
+        <li><a href="/assets/pages/connexion.php" class="service">
+                <h3>Couleur coupe longue</h3>
+                <p>105min, 75 euros</p>
             </a></li>
     </div>
 

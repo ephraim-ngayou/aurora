@@ -18,11 +18,11 @@
         <div class="menu-toggle" id="menu-toggle">☰</div>
 
         <ul id="nav-links">
-            <li><a href="/index.html">Accueil</a></li>
-            <li><a href="/assets/pages/services.html">Nos services</a></li>
-            <li><a href="/assets/pages/contact.html">Prendre rendez-vous</a></li>
-            <li><a href="/assets/pages/connexion.html">Se connecter</a></li>
-            <li><a href="/assets/pages/contact.html">Nous Contacter</a></li>
+            <li><a href="/index.php">Accueil</a></li>
+            <li><a href="/assets/pages/services.php">Nos services</a></li>
+            <li><a href="/assets/pages/contact.php">Prendre rendez-vous</a></li>
+            <li><a href="/assets/pages/connexion.php">Se connecter</a></li>
+            <li><a href="/assets/pages/contact.php">Nous Contacter</a></li>
 
 
 
@@ -30,19 +30,19 @@
     </nav>
 
     <div class="option">
-        <li><a href="/assets/pages/connexion.html" class="service">
+        <li><a href="/assets/pages/connexion.php" class="service">
                 <h3>Coupe fille -20 ans</h3>
                 <p>30min, 30 euros</p>
             </a></li>
-        <li><a href="/assets/pages/connexion.html" class="service">
+        <li><a href="/assets/pages/connexion.php" class="service">
                 <h3>Coupe mi long</h3>
                 <p>45 min, 35 euros</p>
             </a></li>
-        <li><a href="/assets/pages/connexion.html" class="service">
+        <li><a href="/assets/pages/connexion.php" class="service">
                 <h3>Brush coupe court</h3>
                 <p>30min, 35 euros</p>
             </a></li>
-        <li><a href="/assets/pages/connexion.html" class="service">
+        <li><a href="/assets/pages/connexion.php" class="service">
                 <h3>Coupe longue</h3>
                 <p>30min, 35 euros</p>
             </a></li>

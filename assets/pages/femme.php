@@ -18,11 +18,11 @@
         <div class="menu-toggle" id="menu-toggle">☰</div>
 
         <ul id="nav-links">
-            <li><a href="/index.html">Accueil</a></li>
-            <li><a href="/assets/pages/services.html">Nos services</a></li>
-            <li><a href="/assets/pages/contact.html">Prendre rendez-vous</a></li>
-            <li><a href="/assets/pages/connexion.html">Se connecter</a></li>
-            <li><a href="/assets/pages/contact.html">Nous Contacter</a></li>
+            <li><a href="/index.php">Accueil</a></li>
+            <li><a href="/assets/pages/services.php">Nos services</a></li>
+            <li><a href="/assets/pages/contact.php">Prendre rendez-vous</a></li>
+            <li><a href="/assets/pages/connexion.php">Se connecter</a></li>
+            <li><a href="/assets/pages/contact.php">Nous Contacter</a></li>
 
 
 
@@ -30,19 +30,19 @@
     </nav>
 
     <div>
-        <a href="/assets/pages/coupefemme.html">
+        <a href="/assets/pages/coupefemme.php">
             <section class="section1">
             </section>
         </a>
-        <a href="/assets/pages/colorationfemme.html">
+        <a href="/assets/pages/colorationfemme.php">
             <section class="section1">
             </section>
         </a>
-        <a href="/assets/pages/balayages.html">
+        <a href="/assets/pages/balayages.php">
             <section class="section1">
             </section>
         </a>
-        <a href="/assets/pages/coiffure.html">
+        <a href="/assets/pages/coiffure.php">
             <section class="section1">
             </section>
         </a>

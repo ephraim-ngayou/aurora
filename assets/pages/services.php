@@ -4,38 +4,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aurora - Accueil</title>
+  <title>Nos services - Aurora</title>
   <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
 
 <body>
 
-  <header>
-  </header>
-
   <nav class="navbar-expand">
     <div class="menu-toggle" id="menu-toggle">☰</div>
 
     <ul id="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="/assets/pages/services.html">Nos services</a></li>
-      <li><a href="/assets/pages/contact.html">Prendre rendez-vous</a></li>
-      <li><a href="/assets/pages/connexion.html">Se connecter</a></li>
-      <li><a href="/assets/pages/contact.html">Nous Contacter</a></li>
-
+      <li><a href="/index.php">Accueil</a></li>
+      <li><a href="/assets/pages/services.php">Nos services</a></li>
+      <li><a href="/assets/pages/contact.php">Prendre rendez-vous</a></li>
+      <li><a href="/assets/pages/connexion.php">Se connecter</a></li>
+      <li><a href="/assets/pages/contact.php">Nous Contacter</a></li>
 
 
     </ul>
   </nav>
 
-  <div>
-    <section class="section1">
-    </section>
-    <section class="section2">
-    </section>
-  </div>
+  <main>
 
+    <div>
+      <a href="/assets/pages/femme.php">
+        <section class="section1">
+        </section>
+      </a>
+      <a href="/assets/pages/homme.php">
+        <section class="section2">
+        </section>
+      </a>
+    </div>
+
+  </main>
   <script>
     const toggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
@@ -50,6 +53,7 @@
     <p>Politique de confidentialité - Conditions générales d’utilisation</p>
     <p>&copy;2026 Aurora Hair Salon. Tous droits réservés.</p>
   </footer>
+
 
 </body>
 

@@ -18,11 +18,11 @@
         <div class="menu-toggle" id="menu-toggle">☰</div>
 
         <ul id="nav-links">
-            <li><a href="/index.html">Accueil</a></li>
-            <li><a href="/assets/pages/services.html">Nos services</a></li>
-            <li><a href="/assets/pages/contact.html">Prendre rendez-vous</a></li>
-            <li><a href="/assets/pages/connexion.html">Se connecter</a></li>
-            <li><a href="/assets/pages/contact.html">Nous Contacter</a></li>
+            <li><a href="/index.php">Accueil</a></li>
+            <li><a href="/assets/pages/services.php">Nos services</a></li>
+            <li><a href="/assets/pages/contact.php">Prendre rendez-vous</a></li>
+            <li><a href="/assets/pages/connexion.php">Se connecter</a></li>
+            <li><a href="/assets/pages/contact.php">Nous Contacter</a></li>
 
 
 
@@ -30,19 +30,19 @@
     </nav>
 
     <div class="option" class="menu-toggle" id="menu-toggle">
-        <li><a href="/assets/pages/connexion.html" class="service">
+        <li><a href="/assets/pages/connexion.php" class="service">
                 <h3>Balayage brush mi court</h3>
                 <p>105min, 75 euros</p>
             </a></li>
-        <li><a href="/assets/pages/connexion.html" class="service">
+        <li><a href="/assets/pages/connexion.php" class="service">
                 <h3>Balayage brush court</h3>
                 <p>15 min, 25 euros</p>
             </a></li>
-        <li><a href="/assets/pages/connexion.html" class="service">
+        <li><a href="/assets/pages/connexion.php" class="service">
                 <h3>Balayage brush mi long</h3>
                 <p>120min, 80 euros</p>
             </a></li>
-        <li><a href="/assets/pages/connexion.html" class="service">
+        <li><a href="/assets/pages/connexion.php" class="service">
                 <h3>Balayage brush long</h3>
                 <p>120min, 80 euros</p>
             </a></li>
