@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurora - Accueil</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Aurora - Horaire</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
 
@@ -21,39 +21,42 @@
 
             <ul id="nav-links">
                 <li><a href="/index.html">Accueil</a></li>
-                <li><a href="/assets/pages/services.html">Nos services</a></li>
-                <li><a href="/assets/pages/contact.html">Prendre rendez-vous</a></li>
-                <li><a href="/assets/pages/connexion.html">Se connecter</a></li>
-                <li><a href="/assets/pages/contact.html">Nous Contacter</a></li>
+                <li><a href="/pages/services.html">Nos services</a></li>
+                <li><a href="/pages/contact.html">Prendre rendez-vous</a></li>
+                <li><a href="/pages/connexion.html">Se connecter</a></li>
+                <li><a href="/pages/contact.html">Nous Contacter</a></li>
 
 
 
             </ul>
         </nav>
 
-        <div class="option" class="menu-toggle" id="menu-toggle">
-            <li><a href="/assets/pages/horaire.html" class="service">
-                    <h3>Attache</h3>
-                    <p>45min, 40 euros</p>
-                </a></li>
-            <li><a href="/assets/pages/horaire.html" class="service">
-                    <h3>Chignon</h3>
-                    <p>45 min, 30 euros</p>
-                </a></li>
-            <li><a href="/assets/pages/horaire.html" class="service">
-                    <h3>Brush mi long</h3>
-                    <p>30min, 35 euros</p>
-                </a></li>
-            <li><a href="/assets/pages/horaire.html" class="service">
-                    <h3>Brush long</h3>
-                    <p>30min, 35 euros</p>
-                </a></li>
-        </div>
+
+        <section class="horaire-section">
+
+            <h1>Choisissez un créneau</h1>
+
+            <div class="creneaux-list">
+
+                <button class="creneau-btn">09h00</button>
+                <button class="creneau-btn">09h30</button>
+                <button class="creneau-btn">10h30</button>
+                <button class="creneau-btn">11h30</button>
+                <button class="creneau-btn">12h30</button>
+                <button class="creneau-btn">14h00</button>
+                <button class="creneau-btn">15h30</button>
+
+            </div>
+
+        </section>
+
     </main>
+
     <footer>
         <p>Politique de confidentialité - Conditions générales d’utilisation</p>
         <p>&copy;2026 Aurora Hair Salon. Tous droits réservés.</p>
     </footer>
+
     <script>
         const toggle = document.getElementById("menu-toggle");
         const navLinks = document.getElementById("nav-links");
@@ -69,8 +72,6 @@
             overlay.classList.remove("active");
         });
     </script>
-
-
 </body>
 
 </html>

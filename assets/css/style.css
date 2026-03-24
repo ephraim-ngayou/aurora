@@ -382,3 +382,34 @@ section {
   opacity: 1;
   pointer-events: auto;
 }
+
+.horaire-section {
+  padding: 40px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.creneaux-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.creneau-btn {
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  background-color: #C6A963;
+  color: #020202;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 200px;
+  transition: 0.2s;
+}
+
+.creneau-btn:hover {
+  background-color: #020202;
+  color: #C6A963;
+}
