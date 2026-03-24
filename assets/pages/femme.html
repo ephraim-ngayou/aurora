@@ -15,6 +15,7 @@
     </header>
 
     <nav class="navbar-expand">
+         <div class="overlay" id="overlay"></div>
         <div class="menu-toggle" id="menu-toggle">☰</div>
 
         <ul id="nav-links">
@@ -31,28 +32,35 @@
 
     <div>
         <a href="/assets/pages/coupefemme.html">
-            <section class="section1">
+            <section class="section5">
             </section>
         </a>
         <a href="/assets/pages/colorationfemme.html">
-            <section class="section1">
+            <section class="section6">
             </section>
         </a>
         <a href="/assets/pages/balayages.html">
-            <section class="section1">
+            <section class="section7">
             </section>
         </a>
         <a href="/assets/pages/coiffure.html">
-            <section class="section1">
+            <section class="section8">
             </section>
         </a>
     </div>
     <script>
         const toggle = document.getElementById("menu-toggle");
         const navLinks = document.getElementById("nav-links");
+        const overlay = document.getElementById("overlay");
 
         toggle.addEventListener("click", () => {
             navLinks.classList.toggle("active");
+            overlay.classList.toggle("active");
+        });
+
+        overlay.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            overlay.classList.remove("active");
         });
     </script>
 

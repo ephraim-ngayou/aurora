@@ -12,6 +12,7 @@
 <body>
 
   <nav class="navbar-expand">
+     <div class="overlay" id="overlay"></div>
     <div class="menu-toggle" id="menu-toggle">☰</div>
 
     <ul id="nav-links">
@@ -29,11 +30,13 @@
 
     <div>
       <a href="/assets/pages/femme.html">
-        <section class="section1">
+        <section class="section9">
+          <h2>FEMME</h2>
         </section>
       </a>
       <a href="/assets/pages/homme.html">
-        <section class="section2">
+        <section class="section10">
+          <h2>HOMME</h2>
         </section>
       </a>
     </div>
@@ -42,9 +45,16 @@
   <script>
     const toggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
+    const overlay = document.getElementById("overlay");
 
     toggle.addEventListener("click", () => {
       navLinks.classList.toggle("active");
+      overlay.classList.toggle("active");
+    });
+
+    overlay.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      overlay.classList.remove("active");
     });
   </script>
 

@@ -324,3 +324,53 @@ section {
 .section2 {
   background-image: url("/assets/img/coiffure2.jpg");
 }
+
+.section3 {
+  background-image: url("/assets/img/coupehomme.jpg");
+}
+
+.section4 {
+  background-image: url("/assets/img/colorationhomme.jpg");
+}
+
+.section5 {
+  background-image: url("/assets/img/coupefemme.jpeg");
+}
+
+.section6 {
+  background-image: url("/assets/img/colorationfemme.jpg");
+}
+
+.section7 {
+  background-image: url("/assets/img/balayages.jpg");
+}
+
+.section8 {
+  background-image: url("/assets/img/coiffure.jpg");
+}
+
+.section9 {
+  background-image: url("/assets/img/femme.jpg");
+}
+
+.section10 {
+  background-image: url("/assets/img/homme.jpg");
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
