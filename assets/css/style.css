@@ -264,6 +264,7 @@ footer {
 
 .sigin-form input[type="name"],
 .sigin-form input[type="firstname"],
+.sigin-form input[type="tel"],
 .sigin-form input[type="email"],
 .sigin-form input[type="password"] {
   padding: 10px;
