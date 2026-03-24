@@ -13,10 +13,9 @@
         <aside class="sidebar">
             <h1>Back Office</h1>
             <ul class="menu">
-                <li><a href="#" class="active">Utilisateurs</a></li>
-                <li><a href="#">Produits</a></li>
-                <li><a href="#">Commandes</a></li>
-                <li><a href="#">Catégories</a></li>
+                <li><a href="/admin/clients" class="active">Utilisateurs</a></li>
+                <li><a href="/admin/services">Services</a></li>
+                <li><a href="/admin/reservations">Réservations</a></li>
             </ul>
         </aside>
 
