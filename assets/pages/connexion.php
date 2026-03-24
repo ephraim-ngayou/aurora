@@ -56,13 +56,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                 if (password_verify($password, $user["password"])) {
 
+                  $_SESSION["id"] = $user["Id_users"];
+                  $_SESSION["role"] = $user["role"];
+
                   if ($user["role"] == 1){
+
                     header("Location: /admin/index.php");
+                    die;
                   } else {
-                    session_regenerate_id(true);
-
-                    $_SESSION["id"] = $user["Id_users"];
-
                     header("Location: /index.php");
                     exit();
                   }
