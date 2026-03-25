@@ -35,35 +35,72 @@
         </nav>
 
 
-        <section class="horaire-section">
+        <section class="calendar-grid">
 
-            <h1>Choisissez votre créneau</h1>
+            <div class="row">
+                <div class="cell empty"></div>
+                <div class="cell day" data-day="Lundi">Lun</div>
+                <div class="cell day" data-day="Mardi">Mar</div>
+                <div class="cell day" data-day="Mercredi">Mer</div>
+                <div class="cell day" data-day="Jeudi">Jeu</div>
+                <div class="cell day" data-day="Vendredi">Ven</div>
+                <div class="cell day" data-day="Samedi">Sam</div>
+            </div>
 
-            <!-- Choix du jour -->
-            <label for="day-select">Jour :</label>
-            <select id="day-select" class="select-input">
-                <option value="">-- Sélectionnez un jour --</option>
-                <option value="Lundi">Lundi</option>
-                <option value="Mardi">Mardi</option>
-                <option value="Mercredi">Mercredi</option>
-                <option value="Jeudi">Jeudi</option>
-                <option value="Vendredi">Vendredi</option>
-                <option value="Samedi">Samedi</option>
-            </select>
+            <!-- Ligne horaire -->
+            <div class="row">
+                <div class="cell hour">09h00</div>
+                <div class="cell slot" data-day="Lundi" data-hour="09h00"></div>
+                <div class="cell slot" data-day="Mardi" data-hour="09h00"></div>
+                <div class="cell slot" data-day="Mercredi" data-hour="09h00"></div>
+                <div class="cell slot" data-day="Jeudi" data-hour="09h00"></div>
+                <div class="cell slot" data-day="Vendredi" data-hour="09h00"></div>
+                <div class="cell slot" data-day="Samedi" data-hour="09h00"></div>
+            </div>
 
-            <!-- Choix de l'heure -->
-            <label for="hour-select">Heure :</label>
-            <select id="hour-select" class="select-input">
-                <option value="">-- Sélectionnez une heure --</option>
-                <option value="09h00">09h00</option>
-                <option value="10h00">10h00</option>
-                <option value="11h00">11h00</option>
-                <option value="14h00">14h00</option>
-                <option value="15h00">15h00</option>
-            </select>
+            <div class="row">
+                <div class="cell hour">10h00</div>
+                <div class="cell slot" data-day="Lundi" data-hour="10h00"></div>
+                <div class="cell slot" data-day="Mardi" data-hour="10h00"></div>
+                <div class="cell slot" data-day="Mercredi" data-hour="10h00"></div>
+                <div class="cell slot" data-day="Jeudi" data-hour="10h00"></div>
+                <div class="cell slot" data-day="Vendredi" data-hour="10h00"></div>
+                <div class="cell slot" data-day="Samedi" data-hour="10h00"></div>
+            </div>
+
+            <div class="row">
+                <div class="cell hour">11h00</div>
+                <div class="cell slot" data-day="Lundi" data-hour="11h00"></div>
+                <div class="cell slot" data-day="Mardi" data-hour="11h00"></div>
+                <div class="cell slot" data-day="Mercredi" data-hour="11h00"></div>
+                <div class="cell slot" data-day="Jeudi" data-hour="11h00"></div>
+                <div class="cell slot" data-day="Vendredi" data-hour="11h00"></div>
+                <div class="cell slot" data-day="Samedi" data-hour="11h00"></div>
+            </div>
+
+            <div class="row">
+                <div class="cell hour">14h00</div>
+                <div class="cell slot" data-day="Lundi" data-hour="14h00"></div>
+                <div class="cell slot" data-day="Mardi" data-hour="14h00"></div>
+                <div class="cell slot" data-day="Mercredi" data-hour="14h00"></div>
+                <div class="cell slot" data-day="Jeudi" data-hour="14h00"></div>
+                <div class="cell slot" data-day="Vendredi" data-hour="14h00"></div>
+                <div class="cell slot" data-day="Samedi" data-hour="14h00"></div>
+            </div>
+
+            <div class="row">
+                <div class="cell hour">15h00</div>
+                <div class="cell slot" data-day="Lundi" data-hour="15h00"></div>
+                <div class="cell slot" data-day="Mardi" data-hour="15h00"></div>
+                <div class="cell slot" data-day="Mercredi" data-hour="15h00"></div>
+                <div class="cell slot" data-day="Jeudi" data-hour="15h00"></div>
+                <div class="cell slot" data-day="Vendredi" data-hour="15h00"></div>
+                <div class="cell slot" data-day="Samedi" data-hour="15h00"></div>
+            </div>
+
+
 
             <button id="confirm-btn" class="confirm-btn">Confirmer</button>
-
         </section>
 
 
@@ -104,29 +141,37 @@
             toggle.style.display = "block";
         });
 
-        const daySelect = document.getElementById("day-select");
-        const hourSelect = document.getElementById("hour-select");
-        const confirmBtn = document.getElementById("confirm-btn");
+        let selectedDay = null;
+        let selectedHour = null;
 
+        const slots = document.querySelectorAll(".slot");
 
+        slots.forEach(slot => {
+            slot.addEventListener("click", () => {
+                // reset
+                slots.forEach(s => s.classList.remove("selected"));
 
+                // select
+                slot.classList.add("selected");
 
-        const params = new URLSearchParams(window.location.search);
-        const service = params.get("service");
+                selectedDay = slot.dataset.day;
+                selectedHour = slot.dataset.hour;
+            });
+        });
 
-        confirmBtn.addEventListener("click", () => {
-            const day = daySelect.value;
-            const hour = hourSelect.value;
-
-            if (!day || !hour) {
+        document.getElementById("confirm-btn").addEventListener("click", () => {
+            if (!selectedDay || !selectedHour) {
                 alert("Veuillez choisir un jour et une heure.");
                 return;
             }
 
+            const params = new URLSearchParams(window.location.search);
+            const service = params.get("service");
+
             window.location.href =
                 "/pages/confirmation.html?service=" + encodeURIComponent(service) +
-                "&day=" + encodeURIComponent(day) +
-                "&hour=" + encodeURIComponent(hour);
+                "&day=" + encodeURIComponent(selectedDay) +
+                "&hour=" + encodeURIComponent(selectedHour);
         });
     </script>
 </body>

@@ -400,18 +400,67 @@ section {
   pointer-events: auto;
 }
 
-.horaire-section {
-  padding: 40px 20px;
-  text-align: center;
+.calendar-grid {
+  display: grid;
+  gap: 6px;
+  font-family: 'Libre Bodoni', serif;
+  margin: 20px auto;
+  min-width: auto;
   min-height: 100vh;
 }
 
-.select-input {
-  padding: 12px;
-  font-size: 16px;
-  margin: 10px 0 20px;
-  width: 250px;
+.row {
+  display: grid;
+  grid-template-columns: 70px repeat(6, 1fr);
+  gap: 6px;
 }
+
+.cell {
+  padding: 10px 0;
+  background: #f7f7f7;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+/* Ligne des jours */
+.header .cell {
+  background: #C6A963;
+  color: #020202;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* Colonne des heures */
+.hour {
+  background: #C6A963;
+  color: #020202;
+  font-weight: 600;
+}
+
+/* Créneaux */
+.slot {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+.slot:hover {
+  background: #f0e6c8;
+  border-color: #C6A963;
+}
+
+/* Créneau sélectionné */
+.slot.selected {
+  background: #C6A963;
+  color: #020202;
+  font-weight: 600;
+  border-color: #C6A963;
+}
+
+
+
 
 .confirm-btn {
   padding: 12px 20px;

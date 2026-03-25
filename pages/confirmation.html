@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Rendez-vous enregistré</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora - Accueil</title>
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
@@ -11,27 +12,28 @@
     <header class="header">
         <img src="/assets/img/logo.png" alt="Aurora Logo" class="logo-right">
     </header>
+    <main>
 
-    <nav class="navbar-expand">
-        <div class="overlay" id="overlay"></div>
-        <div class="menu-toggle" id="menu-toggle">☰</div>
-        <div class="close-toggle" id="close-toggle">✖</div>
+        <nav class="navbar-expand">
+            <div class="overlay" id="overlay"></div>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <div class="close-toggle" id="close-toggle">✖</div>
 
-        <ul id="nav-links">
-            <li><a href="/index.html">Accueil</a></li>
-            <li><a href="/pages/services.html">Nos services</a></li>
-            <li><a href="/pages/contact.html">Prendre rendez-vous</a></li>
-            <li><a href="/pages/connexion.html">Se connecter</a></li>
-            <li><a href="/pages/contact.html">Nous Contacter</a></li>
+            <ul id="nav-links">
+                <li><a href="/index.html">Accueil</a></li>
+                <li><a href="/pages/services.html">Nos services</a></li>
+                <li><a href="/pages/contact.html">Prendre rendez-vous</a></li>
+                <li><a href="/pages/connexion.html">Se connecter</a></li>
+                <li><a href="/pages/contact.html">Nous Contacter</a></li>
 
 
-        </ul>
-    </nav>
-    <section>
+            </ul>
+        </nav>
+        <section>
 
-        <h1>Rendez-vous enregistré !</h1>
-        <p id="details"></p>
-    </section>
+            <h1>Rendez-vous enregistré !</h1>
+            <p id="details"></p>
+        </section>
     </main>
 
     <footer>
@@ -67,6 +69,7 @@
             closeToggle.style.display = "none";
             toggle.style.display = "block";
         });
+
         const params = new URLSearchParams(window.location.search);
         const service = params.get("service");
         const day = params.get("day");
