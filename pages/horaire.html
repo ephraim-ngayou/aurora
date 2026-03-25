@@ -11,13 +11,16 @@
 
 <body>
 
-    <header>
+    <header class="header">
+        <img src="/assets/img/logo.png" alt="Aurora Logo" class="logo-right">
     </header>
     <main>
+
 
         <nav class="navbar-expand">
             <div class="overlay" id="overlay"></div>
             <div class="menu-toggle" id="menu-toggle">☰</div>
+            <div class="close-toggle" id="close-toggle">✖</div>
 
             <ul id="nav-links">
                 <li><a href="/index.html">Accueil</a></li>
@@ -32,36 +35,36 @@
         </nav>
 
 
-      <section class="horaire-section">
+        <section class="horaire-section">
 
-  <h1>Choisissez votre créneau</h1>
+            <h1>Choisissez votre créneau</h1>
 
-  <!-- Choix du jour -->
-  <label for="day-select">Jour :</label>
-  <select id="day-select" class="select-input">
-    <option value="">-- Sélectionnez un jour --</option>
-    <option value="Lundi">Lundi</option>
-    <option value="Mardi">Mardi</option>
-    <option value="Mercredi">Mercredi</option>
-    <option value="Jeudi">Jeudi</option>
-    <option value="Vendredi">Vendredi</option>
-    <option value="Samedi">Samedi</option>
-  </select>
+            <!-- Choix du jour -->
+            <label for="day-select">Jour :</label>
+            <select id="day-select" class="select-input">
+                <option value="">-- Sélectionnez un jour --</option>
+                <option value="Lundi">Lundi</option>
+                <option value="Mardi">Mardi</option>
+                <option value="Mercredi">Mercredi</option>
+                <option value="Jeudi">Jeudi</option>
+                <option value="Vendredi">Vendredi</option>
+                <option value="Samedi">Samedi</option>
+            </select>
 
-  <!-- Choix de l'heure -->
-  <label for="hour-select">Heure :</label>
-  <select id="hour-select" class="select-input">
-    <option value="">-- Sélectionnez une heure --</option>
-    <option value="09h00">09h00</option>
-    <option value="10h00">10h00</option>
-    <option value="11h00">11h00</option>
-    <option value="14h00">14h00</option>
-    <option value="15h00">15h00</option>
-  </select>
+            <!-- Choix de l'heure -->
+            <label for="hour-select">Heure :</label>
+            <select id="hour-select" class="select-input">
+                <option value="">-- Sélectionnez une heure --</option>
+                <option value="09h00">09h00</option>
+                <option value="10h00">10h00</option>
+                <option value="11h00">11h00</option>
+                <option value="14h00">14h00</option>
+                <option value="15h00">15h00</option>
+            </select>
 
-  <button id="confirm-btn" class="confirm-btn">Confirmer</button>
+            <button id="confirm-btn" class="confirm-btn">Confirmer</button>
 
-</section>
+        </section>
 
 
     </main>
@@ -73,43 +76,58 @@
 
     <script>
         const toggle = document.getElementById("menu-toggle");
+        const closeToggle = document.getElementById("close-toggle");
         const navLinks = document.getElementById("nav-links");
         const overlay = document.getElementById("overlay");
 
         toggle.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-            overlay.classList.toggle("active");
+            navLinks.classList.add("active");
+            overlay.classList.add("active");
+
+            toggle.style.display = "none";       // cacher ☰
+            closeToggle.style.display = "block"; // afficher X
+        });
+
+        closeToggle.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            overlay.classList.remove("active");
+
+            closeToggle.style.display = "none";  // cacher X
+            toggle.style.display = "block";      // afficher ☰
         });
 
         overlay.addEventListener("click", () => {
             navLinks.classList.remove("active");
             overlay.classList.remove("active");
+
+            closeToggle.style.display = "none";
+            toggle.style.display = "block";
         });
 
-         const daySelect = document.getElementById("day-select");
-  const hourSelect = document.getElementById("hour-select");
-  const confirmBtn = document.getElementById("confirm-btn");
-
-  
+        const daySelect = document.getElementById("day-select");
+        const hourSelect = document.getElementById("hour-select");
+        const confirmBtn = document.getElementById("confirm-btn");
 
 
-  const params = new URLSearchParams(window.location.search);
-  const service = params.get("service");
 
-  confirmBtn.addEventListener("click", () => {
-    const day = daySelect.value;
-    const hour = hourSelect.value;
 
-    if (!day || !hour) {
-      alert("Veuillez choisir un jour et une heure.");
-      return;
-    }
+        const params = new URLSearchParams(window.location.search);
+        const service = params.get("service");
 
-    window.location.href =
-      "/pages/confirmation.html?service=" + encodeURIComponent(service) +
-      "&day=" + encodeURIComponent(day) +
-      "&hour=" + encodeURIComponent(hour);
-  });
+        confirmBtn.addEventListener("click", () => {
+            const day = daySelect.value;
+            const hour = hourSelect.value;
+
+            if (!day || !hour) {
+                alert("Veuillez choisir un jour et une heure.");
+                return;
+            }
+
+            window.location.href =
+                "/pages/confirmation.html?service=" + encodeURIComponent(service) +
+                "&day=" + encodeURIComponent(day) +
+                "&hour=" + encodeURIComponent(hour);
+        });
     </script>
 </body>
 
