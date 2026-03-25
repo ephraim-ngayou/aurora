@@ -98,8 +98,9 @@ nav a:hover {
 /* ---------------- SECTIONS ---------------- */
 
 section {
+  display: flex;
   padding: 3rem 2rem;
-  max-width: 1100px;
+  max-width: 50vw;
   margin: 2rem auto;
   background-color: white;
   border-radius: 10px;
@@ -279,10 +280,16 @@ footer {
   font-family: sans-serif;
 }
 
+<<<<<<< HEAD
 .sigin-form input[type="name"],
 .sigin-form input[type="firstname"],
 .sigin-form input[type="tel"],
+=======
+.sigin-form input[type="text"],
+.sigin-form input[type="text"],
+>>>>>>> PHP
 .sigin-form input[type="email"],
+.sigin-form input[type="tel"],
 .sigin-form input[type="password"] {
   padding: 10px;
   border: 1px solid #ddd;

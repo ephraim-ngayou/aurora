@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aurora - Accueil</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 
@@ -17,6 +17,7 @@
 
   <main>
 
+<<<<<<< HEAD:index.html
     <nav class="navbar-expand">
       <div class="overlay" id="overlay"></div>
       <div class="menu-toggle" id="menu-toggle">☰</div>
@@ -29,6 +30,14 @@
         <li><a href="/pages/contact.html">Prendre rendez-vous</a></li>
         <li><a href="/pages/connexion.html">Se connecter</a></li>
         <li><a href="/pages/contact.html">Nous Contacter</a></li>
+=======
+    <ul id="nav-links">
+      <li><a href="index.php">Accueil</a></li>
+      <li><a href="/assets/pages/services.php">Nos services</a></li>
+      <li><a href="/assets/pages/contact.php">Prendre rendez-vous</a></li>
+      <li><a href="/assets/pages/connexion.php">Se connecter</a></li>
+      <li><a href="/assets/pages/contact.php">Nous Contacter</a></li>
+>>>>>>> PHP:index.php
 
 
 
