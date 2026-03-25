@@ -281,9 +281,14 @@ footer {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .sigin-form input[type="name"],
 .sigin-form input[type="firstname"],
 .sigin-form input[type="tel"],
+=======
+.sigin-form input[type="text"],
+.sigin-form input[type="text"],
+>>>>>>> PHP
 =======
 .sigin-form input[type="text"],
 .sigin-form input[type="text"],

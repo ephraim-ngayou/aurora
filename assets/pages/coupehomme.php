@@ -1,0 +1,40 @@
+<?php
+include '../includes/header.php'
+?>
+
+    <div class="option">
+        <li><a href="/assets/pages/connexion.php" class="service">
+                <h3>Coupe Homme</h3>
+                <p>30min, 30 euros</p>
+            </a></li>
+        <li><a href="/assets/pages/connexion.php" class="service">
+                <h3>Coupe couronne Homme</h3>
+                <p>15 min, 25 euros</p>
+            </a></li>
+        <li><a href="/assets/pages/connexion.php" class="service">
+                <h3>Sh Coupe Homme</h3>
+                <p>30min, 35 euros</p>
+            </a></li>
+        <li><a href="/assets/pages/connexion.php" class="service">
+                <h3>Coupe garçon</h3>
+                <p>15min, 25 euros</p>
+            </a></li>
+    </div>
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        toggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+
+
+    <footer>
+        <p>Politique de confidentialité - Conditions générales d’utilisation</p>
+        <p>&copy;2026 Aurora Hair Salon. Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>
